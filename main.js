@@ -300,6 +300,21 @@ const projects = [
     stack: "Python · Stockfish · FastAPI · PWA",
     links: [{ label: { en: "Source code", es: "Código fuente" }, href: "https://github.com/DenReanin/chess-master" }],
   },
+  {
+    name: "Corridor",
+    symbol: "CR",
+    category: "interactive",
+    label: { en: "UNIVERSITY GROUP PROJECT", es: "PROYECTO GRUPAL UNIVERSITARIO" },
+    description: {
+      en: "2D top-down survival horror game built as a university group project: stealth, flashlight, hiding spots and two levels, with portable Windows and Linux releases.",
+      es: "Videojuego 2D de survival horror cenital desarrollado como proyecto grupal universitario: sigilo, linterna, escondites y dos niveles, con versiones portables para Windows y Linux.",
+    },
+    stack: "C++17 · SFML · CMake · Tiled (.tmx)",
+    links: [
+      { label: { en: "Source code", es: "Código fuente" }, href: "https://github.com/DenReanin/corridor" },
+      { label: { en: "Download", es: "Descargar" }, href: "https://github.com/DenReanin/corridor/releases" },
+    ],
+  },
 ];
 
 // Snapshot default English DOM values so switching ES -> EN restores exact markup
