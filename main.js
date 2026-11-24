@@ -201,6 +201,8 @@ const ES_STRINGS = {
   "lab.d5i6": "<strong>Semántica Btrfs y SMB:</strong> cuidar subvolúmenes y nomenclatura uniforme en minúsculas entre Linux y clientes SMB.",
   "about.eyebrow": "06 / PERFIL Y FORMACIÓN",
   "about.title": "Criterio de seguridad.<br /><em>Enfoque multimedia.</em>",
+  "about.portraitTop": "PERFIL // RETRATO",
+  "about.portraitCap": "Den Reanin Gerasimov · Máster en Ciberseguridad",
   "about.copy": "Mi formación en Ingeniería Multimedia marcó cómo abordo la tecnología: entender el sistema completo, diseñar experiencias claras y construir para quien la usa. Ahora me centro en seguridad de aplicaciones, bastionado Linux y automatización de seguridad.",
   "about.linkedin": 'Conectar en LinkedIn <span aria-hidden="true">&#8599;</span>',
   "about.eduLbl": "EDUCACIÓN",
@@ -478,18 +480,40 @@ skillFilterButtons.forEach((button) => {
 
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector("#site-nav");
-menuToggle.addEventListener("click", () => {
-  const isOpen = menuToggle.getAttribute("aria-expanded") !== "true";
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
-  siteNav.classList.toggle("is-open", isOpen);
-});
+const siteHeader = document.querySelector(".site-header");
 
-siteNav.addEventListener("click", (event) => {
-  if (event.target.closest("a")) {
-    menuToggle.setAttribute("aria-expanded", "false");
-    siteNav.classList.remove("is-open");
-  }
-});
+function closeMenu() {
+  if (!menuToggle || !siteNav) return;
+  menuToggle.setAttribute("aria-expanded", "false");
+  siteNav.classList.remove("is-open");
+}
+
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") !== "true";
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    siteNav.classList.toggle("is-open", isOpen);
+  });
+
+  siteNav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && siteNav.classList.contains("is-open")) {
+      closeMenu();
+      menuToggle.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (siteNav.classList.contains("is-open") && siteHeader && !siteHeader.contains(event.target)) {
+      closeMenu();
+    }
+  });
+}
 
 document.querySelectorAll("[data-copy-email]").forEach((btn) => {
   btn.addEventListener("click", async () => {
@@ -618,8 +642,8 @@ function initHeroMesh() {
 
   function resize() {
     const rect = canvas.getBoundingClientRect();
-    width = Math.max(260, Math.round(rect.width || 460));
-    height = Math.max(200, Math.round(rect.height || 290));
+    width = Math.max(220, Math.round(rect.width || 460));
+    height = Math.max(160, Math.round(rect.height || 290));
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     canvas.width = Math.round(width * dpr);
     canvas.height = Math.round(height * dpr);
@@ -732,11 +756,22 @@ function initHeroMesh() {
     }
   }
 
+  let tapTimer = null;
   canvas.addEventListener("pointermove", (ev) => {
     const rect = canvas.getBoundingClientRect();
     pointer.x = ev.clientX - rect.left;
     pointer.y = ev.clientY - rect.top;
     pointer.active = true;
+  });
+  canvas.addEventListener("pointerdown", (ev) => {
+    const rect = canvas.getBoundingClientRect();
+    pointer.x = ev.clientX - rect.left;
+    pointer.y = ev.clientY - rect.top;
+    pointer.active = true;
+    if (tapTimer) clearTimeout(tapTimer);
+    tapTimer = setTimeout(() => {
+      pointer.active = false;
+    }, 1400);
   });
   canvas.addEventListener("pointerleave", () => {
     pointer.active = false;
