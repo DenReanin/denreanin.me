@@ -300,19 +300,6 @@ const projects = [
     stack: "Python · Stockfish · FastAPI · PWA",
     links: [{ label: { en: "Source code", es: "Código fuente" }, href: "https://github.com/DenReanin/chess-master" }],
   },
-  {
-    name: "AENA Exam Simulator",
-    symbol: "AE",
-    category: "interactive",
-    label: { en: "INTERACTIVE SIMULATOR · PRIVATE", es: "SIMULADOR INTERACTIVO · PRIVADO" },
-    description: {
-      en: "Interactive psychometric and English B2 exam trainer featuring study mode, offline TTS listening, official scoring and history.",
-      es: "Simulador interactivo psicotécnico e inglés B2 con modo estudio, audio TTS, puntuación oficial e historial de progreso.",
-    },
-    stack: "TypeScript · Web Audio / TTS · Scoring",
-    links: [],
-    privateNote: true,
-  },
 ];
 
 // Snapshot default English DOM values so switching ES -> EN restores exact markup
