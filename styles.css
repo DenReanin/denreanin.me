@@ -313,6 +313,9 @@ html.has-js .knotic-preview:not(.is-bars-active) .indicator-list i { transform: 
 .about-details { display: grid; grid-template-columns: 1fr 1fr; gap: 25px 34px; }
 .detail-block { padding-top: 13px; border-top: 1px solid var(--line); }
 .detail-cv-request { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.about-social-links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+.htb-inline-link { margin-top: 10px; }
+.cv-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
 .detail-label { margin: 0 0 12px; color: var(--muted); font-size: 12px; }
 .detail-block p:not(.detail-label) { margin: 0 0 12px; color: #586273; font-size: 16px; line-height: 1.65; }
 .detail-block strong { color: var(--ink); font-weight: 600; }

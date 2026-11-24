@@ -132,6 +132,7 @@ const ES_STRINGS = {
   "exp.nasaDesc": "Desarrollo de NEO Tracker, visualización 3D interactiva de objetos cercanos a la Tierra con Angular y Three.js.",
   "exp.htbLbl": "PRÁCTICA CONTINUA",
   "exp.htbVal": "Laboratorios Hack The Box en explotación web, escalada de privilegios y auditoría de vulnerabilidades.",
+  "exp.htbLink": 'Perfil Hack The Box <span aria-hidden="true">&#8599;</span>',
   "exp.langLbl": "IDIOMAS",
   "exp.langVal": "Español · Nativo<br />Ruso · Nativo<br />Inglés · Intermedio alto (B2)<br />Valenciano · Intermedio alto (B2)",
   "exp.eduLbl": "FORMACIÓN",
@@ -205,6 +206,7 @@ const ES_STRINGS = {
   "about.portraitCap": "Den Reanin Gerasimov · Máster en Ciberseguridad",
   "about.copy": "Mi formación en Ingeniería Multimedia marcó cómo abordo la tecnología: entender el sistema completo, diseñar experiencias claras y construir para quien la usa. Ahora me centro en seguridad de aplicaciones, bastionado Linux y automatización de seguridad.",
   "about.linkedin": 'Conectar en LinkedIn <span aria-hidden="true">&#8599;</span>',
+  "about.htb": 'Hack The Box <span aria-hidden="true">&#8599;</span>',
   "about.eduLbl": "EDUCACIÓN",
   "about.edu1": "<strong>Máster en Ciberseguridad</strong><br />Universidad de Alicante · 2026",
   "about.edu2": "<strong>Grado en Ingeniería Multimedia</strong><br />Universidad de Alicante · 2025",
@@ -215,9 +217,10 @@ const ES_STRINGS = {
   "about.cert2": "HCIA-Security V4.0 · Huawei<br />Introduction to Cybersecurity · Cisco<br />Networking Devices · Cisco",
   "about.availLbl": "DISPONIBILIDAD",
   "about.availVal": "<strong>Disponibilidad inmediata · Jornada completa (40 h/semana)</strong><br />Abierto a puestos junior, prácticas, programas graduate y contratación a tiempo completo en ciberseguridad o ingeniería (presencial, híbrido o remoto).",
-  "about.cvLbl": "CV BAJO SOLICITUD",
-  "about.cvDesc": "Puedo enviar un CV adaptado de forma privada para procesos acordes a mi perfil.",
-  "about.cvBtn": 'Solicitar CV <span aria-hidden="true">&#8599;</span>',
+  "about.cvLbl": "CURRÍCULUM VITAE",
+  "about.cvDesc": "Descarga un resumen público en PDF sin datos sensibles o solicita el CV completo por privado.",
+  "about.cvBtn": 'Descargar CV público (PDF) <span aria-hidden="true">&#8599;</span>',
+  "about.cvFull": 'Solicitar CV completo <span aria-hidden="true">&#8599;</span>',
   "footer.eyebrow": "¿TIENES UN RETO DE SEGURIDAD?",
   "footer.cta": 'Hablemos <span aria-hidden="true">&#8599;</span>',
   "footer.loc": "ALICANTE, ESPAÑA · 2026",
@@ -407,6 +410,14 @@ function applyLanguage(lang, persist = true) {
   if (langToggle) {
     langToggle.textContent = currentLang === "es" ? "EN" : "ES";
     langToggle.setAttribute("aria-label", currentLang === "es" ? "Switch to English" : "Cambiar a español");
+  }
+
+  const cvDownloadLink = document.querySelector("#cv-download-link");
+  if (cvDownloadLink) {
+    cvDownloadLink.setAttribute(
+      "href",
+      currentLang === "es" ? "Den-Reanin-Gerasimov-CV-ES.pdf" : "Den-Reanin-Gerasimov-CV-EN.pdf",
+    );
   }
 
   const activePill = document.querySelector(".coverage-grid span.is-scanning");
