@@ -118,7 +118,7 @@
             <a class="text-link" href="mailto:dengerasimov03.m@gmail.com" data-th="hero.contact">Get in touch <span aria-hidden="true">&#8599;</span></a>
             <button class="copy-email-btn" type="button" data-copy-email="dengerasimov03.m@gmail.com" data-t="copy.email">Copy email</button>
           </div>
-          <p class="availability" data-th="hero.avail"><span class="availability-mark"></span> Available immediately · Full-time (40h/week) — junior roles &amp; internships</p>
+          <p class="availability" data-th="hero.avail"><span class="availability-mark"></span> Open to junior cybersecurity roles &amp; internships · Available immediately</p>
         </div>
         <aside class="hero-canvas-frame" aria-label="Interactive security mesh visualisation">
           <div class="visual-topline">
@@ -219,6 +219,11 @@
               <p class="project-type">PYTHON · FASTAPI · CRYPTOGRAPHY</p>
               <h3>MOD_GUARD</h3>
               <p class="project-lede" data-t="mod.lede">A team-built secure file repository exploring end-to-end encryption, multi-factor authentication and tamper-evident audit logs.</p>
+              <div class="mod-specs" aria-label="MOD_GUARD security architecture">
+                <div><span data-t="mod.s1Lbl">ENCRYPTION</span><strong>AES-256-GCM · RSA-OAEP · PBKDF2</strong></div>
+                <div><span data-t="mod.s2Lbl">ACCESS</span><strong data-t="mod.s2Val">TOTP MFA · JWT · 5-level RBAC</strong></div>
+                <div><span data-t="mod.s3Lbl">AUDIT</span><strong data-t="mod.s3Val">RSA-PSS · SHA-256 hash chain</strong></div>
+              </div>
               <div class="project-links"><a href="https://github.com/erf23-ua/MOD_GUARD" target="_blank" rel="noreferrer" data-th="mod.link">Team repository <span aria-hidden="true">&#8599;</span></a></div>
             </div>
             <div class="featured-bottom"><span>03 / 03</span><span data-t="mod.bottom">GROUP PROJECT</span></div>
@@ -255,11 +260,11 @@
             <h4>FieldMaster</h4>
             <p data-t="fm.desc">A platform for designing and analysing sports plays, powered by a custom WebGL engine for 3D scenes, interaction and animation.</p>
             <p class="multimedia-stack">Angular <i>&middot;</i> WebGL <i>&middot;</i> Django <i>&middot;</i> MySQL</p>
+            <p class="multimedia-note" data-t="fm.note">The public repository is a non-operational snapshot with services disabled.</p>
             <div class="project-links multimedia-links">
               <a href="https://github.com/DenReanin/fieldmaster_abp" target="_blank" rel="noreferrer" data-th="fm.repo">Demo repository <span aria-hidden="true">&#8599;</span></a>
               <a href="https://github.com/DenReanin/litesparkweb" target="_blank" rel="noreferrer" data-th="fm.web">Web client <span aria-hidden="true">&#8599;</span></a>
             </div>
-            <p class="multimedia-note" data-t="fm.note">The public repository is a non-operational snapshot with services disabled.</p>
           </article>
           <article class="multimedia-project">
             <div class="multimedia-preview preview-neo" aria-hidden="true">
@@ -403,7 +408,12 @@
           </div>
           <div class="resume-fact">
             <p class="detail-label" data-t="exp.langLbl">LANGUAGES</p>
-            <p data-th="exp.langVal">Spanish · Native<br />Russian · Native<br />English · Upper-intermediate (B2)<br />Valencian · Upper-intermediate (B2)</p>
+            <div class="lang-grid" data-th="exp.langVal">
+              <div><strong>Spanish</strong><span>Native</span></div>
+              <div><strong>Russian</strong><span>Native</span></div>
+              <div><strong>English</strong><span>Upper-intermediate (B2)</span></div>
+              <div><strong>Valencian</strong><span>Upper-intermediate (B2)</span></div>
+            </div>
           </div>
         </div>
       </section>
@@ -528,10 +538,15 @@
       </section>
 
       <section class="about section-wrap" id="about" aria-labelledby="about-title">
-        <div class="about-main">
-          <p class="eyebrow" data-t="about.eyebrow">06 / BACKGROUND</p>
-          <h2 id="about-title" data-th="about.title">Security thinking.<br /><em>Multimedia perspective.</em></h2>
-          <figure class="about-portrait-card">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-t="about.eyebrow">06 / BACKGROUND</p>
+            <h2 id="about-title" data-th="about.title">Security thinking.<br /><em>Multimedia perspective.</em></h2>
+          </div>
+          <p class="section-note" data-t="about.note">Alicante-based cybersecurity engineer combining defensive tooling with clear interface design.</p>
+        </div>
+        <div class="about-layout">
+          <aside class="about-profile-card">
             <div class="portrait-topline">
               <span data-t="about.portraitTop">PROFILE // PORTRAIT</span>
               <span>ALICANTE, ES</span>
@@ -542,41 +557,41 @@
                 <img src="portrait.jpg" alt="Den Reanin Gerasimov portrait" width="640" height="800" loading="lazy" decoding="async" />
               </picture>
             </div>
-            <figcaption class="portrait-caption" data-t="about.portraitCap">Den Reanin Gerasimov · MSc Cybersecurity</figcaption>
-          </figure>
-          <p class="about-copy" data-t="about.copy">My background in Multimedia Engineering shaped how I approach technical work: understand the system, make the experience clear, and build for the person using it. I now focus on application security, Linux hardening and security automation.</p>
-          <div class="about-social-links">
-            <a class="text-link" href="https://www.linkedin.com/in/den-reanin-gerasimov" target="_blank" rel="noreferrer" data-th="about.linkedin">Connect on LinkedIn <span aria-hidden="true">&#8599;</span></a>
-            <a class="text-link" href="https://profile.hackthebox.com/profile/019e36f0-a42a-7006-b0c9-bdeb4e6c5534" target="_blank" rel="noreferrer" data-th="about.htb">Hack The Box <span aria-hidden="true">&#8599;</span></a>
-          </div>
-        </div>
-        <div class="about-details">
-          <div class="detail-block">
-            <p class="detail-label" data-t="about.eduLbl">EDUCATION</p>
-            <p data-th="about.edu1"><strong>MSc, Cybersecurity</strong><br />University of Alicante · 2026</p>
-            <p data-th="about.edu2"><strong>BSc, Multimedia Engineering</strong><br />University of Alicante · 2025</p>
-          </div>
-          <div class="detail-block">
-            <p class="detail-label" data-t="about.focusLbl">FOCUS AREAS</p>
-            <p data-th="about.focusVal">Application security · DAST<br />Linux hardening · DevSecOps<br />Python automation · Web security<br />Docker · WireGuard · DNSSEC lab</p>
-          </div>
-          <div class="detail-block">
-            <p class="detail-label" data-t="about.certLbl">CERTIFICATIONS</p>
-            <p data-th="about.cert1"><strong>ISC2 Certified in Cybersecurity (CC)</strong><br />Awarded September 28, 2026</p>
-            <p data-th="about.cert2">HCIA-Security V4.0 · Huawei<br />Introduction to Cybersecurity · Cisco<br />Networking Devices · Cisco</p>
-          </div>
-          <div class="detail-block detail-availability">
-            <p class="detail-label" data-t="about.availLbl">AVAILABILITY</p>
-            <p data-th="about.availVal"><strong>Available immediately · Full-time (40h/week)</strong><br />Open to junior roles, internships, graduate programmes and full-time cybersecurity or engineering positions (on-site, hybrid or remote).</p>
-          </div>
-          <div class="detail-block detail-cv-request">
-            <div>
-              <p class="detail-label" data-t="about.cvLbl">CURRICULUM VITAE</p>
-              <p data-t="about.cvDesc">Download a privacy-safe public summary PDF or request a full tailored CV privately.</p>
+            <p class="portrait-caption" data-t="about.portraitCap">Den Reanin Gerasimov · MSc Cybersecurity</p>
+            <p class="about-copy" data-t="about.copy">My background in Multimedia Engineering shaped how I approach technical work: understand the system, make the experience clear, and build for the person using it. I now focus on application security, Linux hardening and security automation.</p>
+            <div class="about-social-links">
+              <a class="text-link" href="https://www.linkedin.com/in/den-reanin-gerasimov" target="_blank" rel="noreferrer" data-th="about.linkedin">Connect on LinkedIn <span aria-hidden="true">&#8599;</span></a>
+              <a class="text-link" href="https://profile.hackthebox.com/profile/019e36f0-a42a-7006-b0c9-bdeb4e6c5534" target="_blank" rel="noreferrer" data-th="about.htb">Hack The Box <span aria-hidden="true">&#8599;</span></a>
             </div>
-            <div class="cv-actions">
-              <a class="text-link" id="cv-download-link" href="Den-Reanin-Gerasimov-CV-EN.pdf" target="_blank" rel="noreferrer" data-th="about.cvBtn">Download public CV (PDF) <span aria-hidden="true">&#8599;</span></a>
-              <a class="text-link" href="mailto:dengerasimov03.m@gmail.com?subject=CV%20request" data-th="about.cvFull">Request full CV <span aria-hidden="true">&#8599;</span></a>
+          </aside>
+          <div class="about-details">
+            <div class="detail-block">
+              <p class="detail-label" data-t="about.eduLbl">EDUCATION</p>
+              <p data-th="about.edu1"><strong>MSc, Cybersecurity</strong><br />University of Alicante · 2026</p>
+              <p data-th="about.edu2"><strong>BSc, Multimedia Engineering</strong><br />University of Alicante · 2025</p>
+            </div>
+            <div class="detail-block">
+              <p class="detail-label" data-t="about.certLbl">CERTIFICATIONS</p>
+              <p data-th="about.cert1"><strong>ISC2 Certified in Cybersecurity (CC)</strong><br />Awarded September 28, 2026</p>
+              <p data-th="about.cert2">HCIA-Security V4.0 · Huawei<br />Introduction to Cybersecurity · Cisco<br />Networking Devices · Cisco</p>
+            </div>
+            <div class="detail-block">
+              <p class="detail-label" data-t="about.focusLbl">FOCUS AREAS</p>
+              <p data-th="about.focusVal">Application security · DAST<br />Linux hardening · DevSecOps<br />Python automation · Web security<br />Docker · WireGuard · DNSSEC lab</p>
+            </div>
+            <div class="detail-block detail-availability">
+              <p class="detail-label" data-t="about.availLbl">AVAILABILITY</p>
+              <p data-th="about.availVal"><strong>Available immediately · Full-time (40h/week)</strong><br />Open to junior roles, internships, graduate programmes and full-time cybersecurity or engineering positions (on-site, hybrid or remote).</p>
+            </div>
+            <div class="detail-block detail-cv-request">
+              <div>
+                <p class="detail-label" data-t="about.cvLbl">CURRICULUM VITAE</p>
+                <p data-t="about.cvDesc">Download a privacy-safe public summary PDF or request a full tailored CV privately.</p>
+              </div>
+              <div class="cv-actions">
+                <a class="text-link" id="cv-download-link" href="Den-Reanin-Gerasimov-CV-EN.pdf" target="_blank" rel="noreferrer" data-th="about.cvBtn">Download public CV (PDF) <span aria-hidden="true">&#8599;</span></a>
+                <a class="text-link" href="mailto:dengerasimov03.m@gmail.com?subject=CV%20request" data-th="about.cvFull">Request full CV <span aria-hidden="true">&#8599;</span></a>
+              </div>
             </div>
           </div>
         </div>
